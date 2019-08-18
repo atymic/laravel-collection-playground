@@ -11,24 +11,24 @@
 </template>
 
 <script>
-    import Spinner from 'vue-simple-spinner'
+import Spinner from 'vue-simple-spinner';
 
-    export default {
-        name: "PhpLoading",
-        components: {
-            Spinner
-        },
-        data() {
-            return {
-                failed: false,
-            }
-        },
-        mounted() {
-            setTimeout(() => {
-                this.failed = true;
-            }, 30000)
-        }
-    }
+export default {
+  name: 'PhpLoading',
+  components: {
+    Spinner,
+  },
+  data() {
+    return {
+      failed: false,
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      this.failed = true;
+    }, 30000);
+  },
+};
 </script>
 
 <style scoped>

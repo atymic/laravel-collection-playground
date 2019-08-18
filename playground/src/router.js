@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Playground from './components/Playground'
+import Playground from './components/Playground.vue';
 
 Vue.use(Router);
 
@@ -10,10 +10,6 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Playground,
-    },
-    {
-      path: '/p/:playground',
       component: Playground,
     },
   ],

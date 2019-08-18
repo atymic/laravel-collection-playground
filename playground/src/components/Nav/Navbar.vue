@@ -22,15 +22,6 @@
       </svg>
       Fork
     </button>
-
-    <!--    <button-->
-    <!--      class="ml-auto flex items-center px-4 cursor-pointer transition py-2 hover:bg-blue-700">-->
-    <!--      <svg viewBox="0 0 24 24" class="fill-current h-5 mr-2">-->
-    <!--        <path-->
-    <!--          d="M15 4h4c0.276 0 0.525 0.111 0.707 0.293s0.293 0.431 0.293 0.707v14c0 0.276-0.111 0.525-0.293 0.707s-0.431 0.293-0.707 0.293h-4c-0.552 0-1 0.448-1 1s0.448 1 1 1h4c0.828 0 1.58-0.337 2.121-0.879s0.879-1.293 0.879-2.121v-14c0-0.828-0.337-1.58-0.879-2.121s-1.293-0.879-2.121-0.879h-4c-0.552 0-1 0.448-1 1s0.448 1 1 1zM12.586 11h-9.586c-0.552 0-1 0.448-1 1s0.448 1 1 1h9.586l-3.293 3.293c-0.391 0.391-0.391 1.024 0 1.414s1.024 0.391 1.414 0l5-5c0.096-0.096 0.168-0.206 0.217-0.324s0.076-0.247 0.076-0.383c0-0.13-0.025-0.261-0.076-0.383-0.049-0.118-0.121-0.228-0.217-0.324l-5-5c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"></path>-->
-    <!--      </svg>-->
-    <!--      Login with GitHub-->
-    <!--    </button>-->
     <button class="ml-auto flex items-center px-4 cursor-pointer transition py-2 hover:bg-blue-700">
       <svg viewBox="0 0 24 24" class="fill-current h-5">
         <path
@@ -41,38 +32,38 @@
 </template>
 
 <script>
-    export default {
-        name: "Navbar",
-        props: {
-            saveable: Boolean,
-            forkable: Boolean,
-        },
-        computed: {
-            save() {
-                return [
-                    'ml-8',
-                    'flex',
-                    'items-center',
-                    'px-4',
-                    'transition',
-                    'py-2',
-                    this.saveable ? 'cursor-pointer' : 'cursor-not-allowed',
-                    this.saveable ? 'hover:bg-red-700' : 'opacity-25'
-                ]
-            },
-            fork() {
-                return [
-                    'flex',
-                    'items-center',
-                    'px-4',
-                    'transition',
-                    'py-2',
-                    this.forkable ? 'cursor-pointer' : 'cursor-not-allowed',
-                    this.forkable ? 'hover:bg-red-700' : 'opacity-25'
-                ]
-            },
-        }
-    }
+export default {
+  name: 'Navbar',
+  props: {
+    saveable: Boolean,
+    forkable: Boolean,
+  },
+  computed: {
+    save() {
+      return [
+        'ml-8',
+        'flex',
+        'items-center',
+        'px-4',
+        'transition',
+        'py-2',
+        this.saveable ? 'cursor-pointer' : 'cursor-not-allowed',
+        this.saveable ? 'hover:bg-red-700' : 'opacity-25',
+      ];
+    },
+    fork() {
+      return [
+        'flex',
+        'items-center',
+        'px-4',
+        'transition',
+        'py-2',
+        this.forkable ? 'cursor-pointer' : 'cursor-not-allowed',
+        this.forkable ? 'hover:bg-red-700' : 'opacity-25',
+      ];
+    },
+  },
+};
 </script>
 
 <style scoped>

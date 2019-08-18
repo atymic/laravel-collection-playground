@@ -3,7 +3,7 @@ module.exports = {
     extend: {
       colors: {
         'laravel-red': '#f4645f',
-      }
+      },
     },
   },
   variants: {},

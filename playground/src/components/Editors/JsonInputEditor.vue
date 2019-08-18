@@ -21,56 +21,56 @@
 </template>
 
 <script>
-    import {codemirror} from 'vue-codemirror';
-    import 'codemirror/mode/javascript/javascript.js';
-    import Spinner from 'vue-simple-spinner'
+import { codemirror } from 'vue-codemirror';
+import 'codemirror/mode/javascript/javascript';
+import Spinner from 'vue-simple-spinner';
 
-    export default {
-        name: 'JsonInputEditor',
-        components: {
-            codemirror,
-            Spinner
-        },
-        props: {
-            value: String,
-            loading: Boolean,
-        },
-        watch: {
-            value() {
-                this.json = this.value;
-            },
-            json() {
-                this.$emit('input', this.json);
-            }
-        },
-        data() {
-            return {
-                json: this.value,
-                editorOptions: {
-                    tabSize: 2,
-                    lineNumbers: true,
-                    line: true,
-                    mode: 'application/json',
-                    lineWrapping: true,
-                },
-            };
-        },
-        methods: {
-            tidy() {
-                this.json = this.tidyJson(this.json);
-            },
-            tidyJson(data) {
-                let parsed;
-                try {
-                    parsed = JSON.parse(data);
-                } catch (e) {
-                    return data;
-                }
-
-                return JSON.stringify(parsed, null, 2);
-            }
-        }
+export default {
+  name: 'JsonInputEditor',
+  components: {
+    codemirror,
+    Spinner,
+  },
+  props: {
+    value: String,
+    loading: Boolean,
+  },
+  watch: {
+    value() {
+      this.json = this.value;
+    },
+    json() {
+      this.$emit('input', this.json);
+    },
+  },
+  data() {
+    return {
+      json: this.value,
+      editorOptions: {
+        tabSize: 2,
+        lineNumbers: true,
+        line: true,
+        mode: 'application/json',
+        lineWrapping: true,
+      },
     };
+  },
+  methods: {
+    tidy() {
+      this.json = this.tidyJson(this.json);
+    },
+    tidyJson(data) {
+      let parsed;
+      try {
+        parsed = JSON.parse(data);
+      } catch (e) {
+        return data;
+      }
+
+      return JSON.stringify(parsed, null, 2);
+    },
+  },
+};
 </script>
 
 <style>

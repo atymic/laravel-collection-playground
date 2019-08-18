@@ -2,7 +2,7 @@ import Axios from 'axios';
 
 export default class ApiClient {
   static async load(playgroundId) {
-    return await Axios.get(`https://api.github.com/gists/${playgroundId}`).then(res => {
+    return Axios.get(`https://api.github.com/gists/${playgroundId}`).then((res) => {
       if (res.data.owner.login !== 'collection-playground') return null;
 
       return {
@@ -12,18 +12,16 @@ export default class ApiClient {
         input: res.data.files['input.json'].content,
         code: res.data.files['collection.php'].content,
         output: res.data.files['output.json'].content,
-      }
-    })
+      };
+    });
   }
 
   static async save(input, code, output) {
     // TODO url rewriting
     const endpoint = process.env.mode === 'production'
       ? '/.netlify/functions/save'
-      : 'http://localhost:9000/.netlify/functions/save'
+      : 'http://localhost:9000/.netlify/functions/save';
 
-    return await Axios.post(endpoint, {input, code, output}).then(res => {
-      return res.data.id
-    })
+    return Axios.post(endpoint, { input, code, output }).then(res => res.data.id);
   }
 }

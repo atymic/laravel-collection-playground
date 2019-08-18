@@ -10,12 +10,12 @@
 </template>
 
 <script>
-    export default {
-        name: "PhpError",
-        props: {
-            error: Object,
-        }
-    }
+export default {
+  name: 'PhpError',
+  props: {
+    error: Object,
+  },
+};
 </script>
 
 <style scoped>

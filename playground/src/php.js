@@ -1,37 +1,32 @@
 function encode(input) {
-  return encodeURIComponent(input).replace(/'/g, "%27")
+  return encodeURIComponent(input).replace(/'/g, '%27');
 }
 
 window.phpModule = {};
 
-let phpModuleOptions = {
-  postRun: function () {
+const phpModuleOptions = {
+  postRun() {
     console.info('PHP Loaded');
-    vue.$emit('php.loaded')
+    vue.$emit('php.loaded');
   },
-  print: function (text) {
-    if (arguments.length > 1) {
-      text = Array.prototype.slice.call(arguments).join(' ');
-    }
+  print(...lines) {
+    const output = lines.join(' ');
 
-    console.info(`Output received from PHP: ${text}`);
-    vue.$emit('php.print', text)
+    console.info(`Output received from PHP: ${output}`);
+    vue.$emit('php.print', output);
   },
-  printErr: function (text) {
-    if (arguments.length > 1) {
-      text = Array.prototype.slice.call(arguments).join(' ');
-    }
+  printErr(...lines) {
+    const error = lines.join(' ');
 
-    console.error(`Error received from PHP: ${text}`);
-    vue.$emit('php.error', text)
-  }
+    console.error(`Error received from PHP: ${error}`);
+    vue.$emit('php.error', error);
+  },
 };
 
 window.phpModule = PHP(phpModuleOptions);
 
 vue.$on('php.run.collection', (inputJson, collectionCode) => {
-  const code = `$phar = 'phar://app.phar';require $phar . '/index.php';playground('${encode(inputJson)}', 'return ${encode(collectionCode)}');echo PHP_EOL;`
-  let ret = phpModule.ccall('pib_eval', 'number', ["string"], [code])
-  console.log(code)
-  console.log(`PHP ran with ${ret}`)
-})
+  const code = `$phar = 'phar://app.phar';require $phar . '/index.php';playground('${encode(inputJson)}', 'return ${encode(collectionCode)}');echo PHP_EOL;`;
+  const ret = phpModule.ccall('pib_eval', 'number', ['string'], [code]);
+  console.log(`PHP ran with ${ret}`);
+});

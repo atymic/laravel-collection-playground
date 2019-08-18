@@ -10,20 +10,20 @@
 </template>
 
 <script>
-    export default {
-        name: "Footer",
-        data() {
-            return {
-                mountedAt: Date.now(),
-                loadTime: null,
-            }
-        },
-        created() {
-            this.$root.$on('php.loaded', () => {
-                this.loadTime = ((Date.now() - this.mountedAt) / 1000).toFixed(1);
-            })
-        }
-    }
+export default {
+  name: 'Footer',
+  data() {
+    return {
+      mountedAt: Date.now(),
+      loadTime: null,
+    };
+  },
+  created() {
+    this.$root.$on('php.loaded', () => {
+      this.loadTime = ((Date.now() - this.mountedAt) / 1000).toFixed(1);
+    });
+  },
+};
 </script>
 
 <style scoped>
