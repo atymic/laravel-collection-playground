@@ -31,6 +31,7 @@
 <script>
 import { debounce } from 'lodash';
 import ApiClient from '../apiClient';
+import defaults from '../defaults';
 
 import CollectionEditor from './Editors/CollectionEditor.vue';
 import JsonInputEditor from './Editors/JsonInputEditor.vue';
@@ -144,10 +145,7 @@ export default {
       }
 
       // Load defaults
-      this.load({
-        input: '{"new_relic_transaction_id":"5d41402abc4b2a76","request_id":"9a6206c9-e562-403c-aee0-939a8f21272d"}',
-        code: '$collection',
-      });
+      this.load(defaults);
     },
   },
   computed: {

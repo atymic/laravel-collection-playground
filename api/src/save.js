@@ -3,7 +3,7 @@ import Axios from 'axios';
 export function handler(event, context, callback) {
     const {GITHUB_TOKEN} = process.env
 
-    const respond = (body, code = 200) => {
+    const respondJSON = (body, code = 200) => {
         callback(null, {
             statusCode: code,
             body: JSON.stringify(body),
@@ -28,7 +28,7 @@ export function handler(event, context, callback) {
     }
 
     if (event.httpMethod !== 'POST') {
-        respond({error: 'Invalid Request'}, 400);
+        respondJSON({error: 'Invalid Request'}, 400);
     }
 
     const data = JSON.parse(event.body);
@@ -55,7 +55,7 @@ export function handler(event, context, callback) {
         }
     }).then((res) => {
             console.log(`Gist created with id ${res.data.id}`)
-        respond(res.data)
+        respondJSON(res.data)
         }
-    ).catch(err => respond(err))
+    ).catch(err => respondJSON(err))
 }

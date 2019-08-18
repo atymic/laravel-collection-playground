@@ -1,4 +1,4 @@
-# playground
+# Collection Playground
 
 ## Project setup
 ```

@@ -17,8 +17,7 @@ export default class ApiClient {
   }
 
   static async save(input, code, output) {
-    // TODO url rewriting
-    const endpoint = process.env.mode === 'production'
+    const endpoint = process.env.NODE_ENV !== 'development'
       ? '/.netlify/functions/save'
       : 'http://localhost:9000/.netlify/functions/save';
 
