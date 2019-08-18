@@ -1,10 +1,10 @@
 <template>
   <div class="flex-1 flex flex-col">
     <div class="flex flex-wrap border-b border-l border-r text-sm select-none">
-      <button
-        class="py-2 px-3 focus:outline-none focus:bg-gray-200 text-gray-500">
+      <span
+        class="py-2 px-3 text-gray-500">
         Collection Code
-      </button>
+      </span>
     </div>
     <div class="flex-1 flex border-l border-r ">
       <div v-if="loading" class="flex-1 flex flex-col justify-center align-center">

@@ -12,6 +12,7 @@
     "axios": "^0.19.0",
     "code-mirror-themes": "^1.0.0",
     "core-js": "^2.6.5",
+    "file-saver": "^2.0.2",
     "lodash": "^4.17.15",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",

@@ -2,7 +2,7 @@
   <main>
     <div class="w-screen h-screen flex flex-col">
       <navbar
-        :saveable="!isSavedPlayground"
+        :saveable="!isSavedPlayground && !error"
         :forkable="isSavedPlayground"
         @save="save"
       ></navbar>
@@ -20,7 +20,7 @@
             :loading="loading"
           ></collection-editor>
 
-          <php-output v-model="output"></php-output>
+          <php-output @error="error = $event" v-model="output"></php-output>
         </div>
       </div>
       <p-footer></p-footer>
@@ -55,6 +55,7 @@ export default {
       input: null,
       code: null,
       output: '',
+      error: null,
     };
   },
   watch: {

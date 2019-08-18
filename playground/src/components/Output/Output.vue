@@ -1,12 +1,13 @@
 <template>
   <div class="flex-1 flex flex-col">
     <div class="flex flex-wrap border-b text-sm select-none">
-      <button
-        class="py-2 px-3 focus:outline-none focus:bg-gray-200 text-gray-500">
+      <span
+        class="py-2 px-3 text-gray-500">
         Output
-      </button>
+      </span>
       <button
-        class="ml-auto py-2 px-3 focus:outline-none border-b-3 transition border-transparent focus:bg-gray-200">
+        @click="download"
+        class="ml-auto py-2 px-3 focus:outline-none border-b-3 transition border-transparent hover:bg-gray-200 focus:bg-gray-400">
         Download
       </button>
     </div>
@@ -19,6 +20,7 @@
 </template>
 
 <script>
+import { saveAs } from 'file-saver';
 import { codemirror } from 'vue-codemirror';
 import 'codemirror/mode/javascript/javascript';
 import PhpLoading from './PhpLoading.vue';
@@ -60,6 +62,9 @@ export default {
 
       return JSON.stringify(JSON.parse(json), null, 2);
     },
+    download() {
+      saveAs(new Blob([this.outputJson], {type: "application/json;charset=utf-8"}), 'output.json')
+    }
   },
   created() {
     this.$root.$on('php.loaded', () => {
@@ -83,9 +88,8 @@ export default {
       this.outputError = res.error;
 
 
-      if (this.outputJson) {
-        this.$emit('input', this.outputJson);
-      }
+      this.$emit('error', this.outputError);
+      if (this.outputJson) this.$emit('input', this.outputJson);
     });
   },
 };

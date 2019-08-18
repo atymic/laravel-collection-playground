@@ -1,13 +1,13 @@
 <template>
   <div class="flex-1 flex flex-col">
     <div class="flex flex-wrap border-b text-sm select-none">
-      <button
-        class="py-2 px-3 focus:outline-none text-gray-500">
+      <span
+        class="py-2 px-3 text-gray-500">
         Input Json
-      </button>
+      </span>
       <button
         @click="tidy"
-        class="ml-auto py-2 px-3 focus:outline-none border-b-3 transition border-transparent focus:bg-gray-200">
+        class="ml-auto py-2 px-3 focus:outline-none border-b-3 transition border-transparent hover:bg-gray-200 focus:bg-gray-400">
         Tidy
       </button>
     </div>
