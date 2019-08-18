@@ -1,0 +1,11 @@
+{
+    "require": {
+        "tightenco/collect": "^5.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Atymic\\CollectionPlayground\\": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
