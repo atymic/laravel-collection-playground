@@ -1,6 +1,6 @@
 <template>
-  <div class="relative bg-laravel-red flex justify-center items-stretch select-none text-white">
-    <div class="text-2xl font-semibold ml-3 self-center py-2 transition cursor-pointer">
+  <div class="relative bg-laravel-red flex items-stretch select-none text-white">
+    <div class="text-2xl font-semibold ml-3 self-center py-2 transition cursor-pointer flex-grow">
       Laravel Collection Playground
     </div>
     <button
@@ -14,9 +14,10 @@
       Save
     </button>
     <button
+      :disabled="!forkable"
       @click="$emit('save')"
       :class="fork">
-      <svg viewBox="0 0 16 28" class="fill-current h-5 mr-2">
+      <svg viewBox="0 0 16 28" class="fill-current h-5 mr-3">
         <path
           d="M4.5 23c0-0.828-0.672-1.5-1.5-1.5s-1.5 0.672-1.5 1.5 0.672 1.5 1.5 1.5 1.5-0.672 1.5-1.5zM4.5 5c0-0.828-0.672-1.5-1.5-1.5s-1.5 0.672-1.5 1.5 0.672 1.5 1.5 1.5 1.5-0.672 1.5-1.5zM14.5 7c0-0.828-0.672-1.5-1.5-1.5s-1.5 0.672-1.5 1.5 0.672 1.5 1.5 1.5 1.5-0.672 1.5-1.5zM16 7c0 1.109-0.609 2.078-1.5 2.594-0.047 5.641-4.047 6.891-6.703 7.734-2.484 0.781-3.297 1.156-3.297 2.672v0.406c0.891 0.516 1.5 1.484 1.5 2.594 0 1.656-1.344 3-3 3s-3-1.344-3-3c0-1.109 0.609-2.078 1.5-2.594v-12.812c-0.891-0.516-1.5-1.484-1.5-2.594 0-1.656 1.344-3 3-3s3 1.344 3 3c0 1.109-0.609 2.078-1.5 2.594v7.766c0.797-0.391 1.641-0.656 2.406-0.891 2.906-0.922 4.562-1.609 4.594-4.875-0.891-0.516-1.5-1.484-1.5-2.594 0-1.656 1.344-3 3-3s3 1.344 3 3z"></path>
       </svg>
