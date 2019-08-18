@@ -1,2 +1,5 @@
 [build]
+  base = "playground/"
   functions = "./functions"
+  command = "yarn build"
+  publish = "dist"
