@@ -3,7 +3,7 @@
     <div class="flex flex-wrap border-b border-l border-t border-r text-sm select-none">
       <span
         class="py-2 px-3 text-gray-500">
-        Collection Documentation
+        Documentation
       </span>
       <multiselect class="ml-20 lg:ml-auto lg:w-1/2 lg:flex-grow-0 inline border-none flex-grow" placeholder="Search for a method" label="method" :options="methods" @input="showMethod"></multiselect>
       <button
@@ -36,7 +36,7 @@
     data() {
       return {
         methodDocs: methodsHtml,
-        docs: true,
+        docs: window.innerHeight > 800,
         methods: methods,
       }
     },

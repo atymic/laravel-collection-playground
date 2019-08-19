@@ -5,9 +5,7 @@
 @tailwind utilities;
 
 .docs {
-  body {
-    font-size: 17px;
-  }
+  font-size: 15px;
 
   a {
     @apply .font-semibold;
@@ -129,7 +127,7 @@
 
   pre {
     @apply .bg-gray-200;
-    @apply .leading-loose;
+    @apply .leading-tight;
     @apply .my-6;
     @apply .overflow-x-auto;
     @apply .p-4;
