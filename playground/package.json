@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "docs": "curl https://raw.githubusercontent.com/laravel/docs/5.8/collections.md > ./src/docs/collections.md",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -13,10 +14,14 @@
     "code-mirror-themes": "^1.0.0",
     "core-js": "^2.6.5",
     "file-saver": "^2.0.2",
+    "highlight.js": "^9.15.9",
     "lodash": "^4.17.15",
+    "markdown-loader": "^5.1.0",
+    "marked": "^0.7.0",
     "register-service-worker": "^1.6.2",
     "vue": "^2.6.10",
     "vue-codemirror": "^4.0.6",
+    "vue-multiselect": "^2.1.6",
     "vue-router": "^3.0.3",
     "vue-simple-spinner": "^1.2.8"
   },
@@ -29,6 +34,9 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
+    "html-loader": "^0.5.5",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0",
     "tailwindcss": "^1.1.2",
     "vue-template-compiler": "^2.6.10"
   }

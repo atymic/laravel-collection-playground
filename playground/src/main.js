@@ -3,7 +3,7 @@ import App from './App.vue';
 import router from './router';
 import './registerServiceWorker';
 
-import '@/assets/css/tailwind.css';
+import '@/assets/css/tailwind.scss';
 import 'codemirror/lib/codemirror.css';
 
 Vue.config.productionTip = false;

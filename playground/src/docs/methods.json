@@ -1,0 +1,470 @@
+[
+  {
+    "method": "all",
+    "id": "method-all"
+  },
+  {
+    "method": "average",
+    "id": "method-average"
+  },
+  {
+    "method": "avg",
+    "id": "method-avg"
+  },
+  {
+    "method": "chunk",
+    "id": "method-chunk"
+  },
+  {
+    "method": "collapse",
+    "id": "method-collapse"
+  },
+  {
+    "method": "combine",
+    "id": "method-combine"
+  },
+  {
+    "method": "concat",
+    "id": "method-concat"
+  },
+  {
+    "method": "contains",
+    "id": "method-contains"
+  },
+  {
+    "method": "containsStrict",
+    "id": "method-containsstrict"
+  },
+  {
+    "method": "count",
+    "id": "method-count"
+  },
+  {
+    "method": "countBy",
+    "id": "method-countBy"
+  },
+  {
+    "method": "crossJoin",
+    "id": "method-crossjoin"
+  },
+  {
+    "method": "dd",
+    "id": "method-dd"
+  },
+  {
+    "method": "diff",
+    "id": "method-diff"
+  },
+  {
+    "method": "diffAssoc",
+    "id": "method-diffassoc"
+  },
+  {
+    "method": "diffKeys",
+    "id": "method-diffkeys"
+  },
+  {
+    "method": "dump",
+    "id": "method-dump"
+  },
+  {
+    "method": "duplicates",
+    "id": "method-duplicates"
+  },
+  {
+    "method": "duplicatesStrict",
+    "id": "method-duplicatesstrict"
+  },
+  {
+    "method": "each",
+    "id": "method-each"
+  },
+  {
+    "method": "eachSpread",
+    "id": "method-eachspread"
+  },
+  {
+    "method": "every",
+    "id": "method-every"
+  },
+  {
+    "method": "except",
+    "id": "method-except"
+  },
+  {
+    "method": "filter",
+    "id": "method-filter"
+  },
+  {
+    "method": "first",
+    "id": "method-first"
+  },
+  {
+    "method": "flatMap",
+    "id": "method-flatmap"
+  },
+  {
+    "method": "flatten",
+    "id": "method-flatten"
+  },
+  {
+    "method": "flip",
+    "id": "method-flip"
+  },
+  {
+    "method": "forget",
+    "id": "method-forget"
+  },
+  {
+    "method": "forPage",
+    "id": "method-forpage"
+  },
+  {
+    "method": "get",
+    "id": "method-get"
+  },
+  {
+    "method": "groupBy",
+    "id": "method-groupby"
+  },
+  {
+    "method": "has",
+    "id": "method-has"
+  },
+  {
+    "method": "implode",
+    "id": "method-implode"
+  },
+  {
+    "method": "intersect",
+    "id": "method-intersect"
+  },
+  {
+    "method": "intersectByKeys",
+    "id": "method-intersectbykeys"
+  },
+  {
+    "method": "isEmpty",
+    "id": "method-isempty"
+  },
+  {
+    "method": "isNotEmpty",
+    "id": "method-isnotempty"
+  },
+  {
+    "method": "join",
+    "id": "method-join"
+  },
+  {
+    "method": "keyBy",
+    "id": "method-keyby"
+  },
+  {
+    "method": "keys",
+    "id": "method-keys"
+  },
+  {
+    "method": "last",
+    "id": "method-last"
+  },
+  {
+    "method": "macro",
+    "id": "method-macro"
+  },
+  {
+    "method": "make",
+    "id": "method-make"
+  },
+  {
+    "method": "map",
+    "id": "method-map"
+  },
+  {
+    "method": "mapInto",
+    "id": "method-mapinto"
+  },
+  {
+    "method": "mapSpread",
+    "id": "method-mapspread"
+  },
+  {
+    "method": "mapToGroups",
+    "id": "method-maptogroups"
+  },
+  {
+    "method": "mapWithKeys",
+    "id": "method-mapwithkeys"
+  },
+  {
+    "method": "max",
+    "id": "method-max"
+  },
+  {
+    "method": "median",
+    "id": "method-median"
+  },
+  {
+    "method": "merge",
+    "id": "method-merge"
+  },
+  {
+    "method": "mergeRecursive",
+    "id": "method-mergerecursive"
+  },
+  {
+    "method": "min",
+    "id": "method-min"
+  },
+  {
+    "method": "mode",
+    "id": "method-mode"
+  },
+  {
+    "method": "nth",
+    "id": "method-nth"
+  },
+  {
+    "method": "only",
+    "id": "method-only"
+  },
+  {
+    "method": "pad",
+    "id": "method-pad"
+  },
+  {
+    "method": "partition",
+    "id": "method-partition"
+  },
+  {
+    "method": "pipe",
+    "id": "method-pipe"
+  },
+  {
+    "method": "pluck",
+    "id": "method-pluck"
+  },
+  {
+    "method": "pop",
+    "id": "method-pop"
+  },
+  {
+    "method": "prepend",
+    "id": "method-prepend"
+  },
+  {
+    "method": "pull",
+    "id": "method-pull"
+  },
+  {
+    "method": "push",
+    "id": "method-push"
+  },
+  {
+    "method": "put",
+    "id": "method-put"
+  },
+  {
+    "method": "random",
+    "id": "method-random"
+  },
+  {
+    "method": "reduce",
+    "id": "method-reduce"
+  },
+  {
+    "method": "reject",
+    "id": "method-reject"
+  },
+  {
+    "method": "replace",
+    "id": "method-replace"
+  },
+  {
+    "method": "replaceRecursive",
+    "id": "method-replacerecursive"
+  },
+  {
+    "method": "reverse",
+    "id": "method-reverse"
+  },
+  {
+    "method": "search",
+    "id": "method-search"
+  },
+  {
+    "method": "shift",
+    "id": "method-shift"
+  },
+  {
+    "method": "shuffle",
+    "id": "method-shuffle"
+  },
+  {
+    "method": "slice",
+    "id": "method-slice"
+  },
+  {
+    "method": "some",
+    "id": "method-some"
+  },
+  {
+    "method": "sort",
+    "id": "method-sort"
+  },
+  {
+    "method": "sortBy",
+    "id": "method-sortby"
+  },
+  {
+    "method": "sortByDesc",
+    "id": "method-sortbydesc"
+  },
+  {
+    "method": "sortKeys",
+    "id": "method-sortkeys"
+  },
+  {
+    "method": "sortKeysDesc",
+    "id": "method-sortkeysdesc"
+  },
+  {
+    "method": "splice",
+    "id": "method-splice"
+  },
+  {
+    "method": "split",
+    "id": "method-split"
+  },
+  {
+    "method": "sum",
+    "id": "method-sum"
+  },
+  {
+    "method": "take",
+    "id": "method-take"
+  },
+  {
+    "method": "tap",
+    "id": "method-tap"
+  },
+  {
+    "method": "times",
+    "id": "method-times"
+  },
+  {
+    "method": "toArray",
+    "id": "method-toarray"
+  },
+  {
+    "method": "toJson",
+    "id": "method-tojson"
+  },
+  {
+    "method": "transform",
+    "id": "method-transform"
+  },
+  {
+    "method": "union",
+    "id": "method-union"
+  },
+  {
+    "method": "unique",
+    "id": "method-unique"
+  },
+  {
+    "method": "uniqueStrict",
+    "id": "method-uniquestrict"
+  },
+  {
+    "method": "unless",
+    "id": "method-unless"
+  },
+  {
+    "method": "unlessEmpty",
+    "id": "method-unlessempty"
+  },
+  {
+    "method": "unlessNotEmpty",
+    "id": "method-unlessnotempty"
+  },
+  {
+    "method": "unwrap",
+    "id": "method-unwrap"
+  },
+  {
+    "method": "values",
+    "id": "method-values"
+  },
+  {
+    "method": "when",
+    "id": "method-when"
+  },
+  {
+    "method": "whenEmpty",
+    "id": "method-whenempty"
+  },
+  {
+    "method": "whenNotEmpty",
+    "id": "method-whennotempty"
+  },
+  {
+    "method": "where",
+    "id": "method-where"
+  },
+  {
+    "method": "whereStrict",
+    "id": "method-wherestrict"
+  },
+  {
+    "method": "whereBetween",
+    "id": "method-wherebetween"
+  },
+  {
+    "method": "whereIn",
+    "id": "method-wherein"
+  },
+  {
+    "method": "whereInStrict",
+    "id": "method-whereinstrict"
+  },
+  {
+    "method": "whereInstanceOf",
+    "id": "method-whereinstanceof"
+  },
+  {
+    "method": "whereNotBetween",
+    "id": "method-wherenotbetween"
+  },
+  {
+    "method": "whereNotIn",
+    "id": "method-wherenotin"
+  },
+  {
+    "method": "whereNotInStrict",
+    "id": "method-wherenotinstrict"
+  },
+  {
+    "method": "wrap",
+    "id": "method-wrap"
+  },
+  {
+    "method": "zip",
+    "id": "method-zip"
+  },
+  {
+    "method": "only",
+    "id": "method-only"
+  },
+  {
+    "method": "reject",
+    "id": "method-reject"
+  },
+  {
+    "method": "where",
+    "id": "method-where"
+  },
+  {
+    "method": "except",
+    "id": "method-except"
+  }
+]

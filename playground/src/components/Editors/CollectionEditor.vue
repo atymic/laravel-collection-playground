@@ -12,48 +12,51 @@
       </div>
       <codemirror v-else v-model="code" :options="editorOptions"></codemirror>
     </div>
+    <collection-documentation></collection-documentation>
   </div>
 </template>
 
 <script>
-import { codemirror } from 'vue-codemirror';
-import 'codemirror/mode/php/php';
-import Spinner from 'vue-simple-spinner';
+  import { codemirror } from 'vue-codemirror'
+  import 'codemirror/mode/php/php'
+  import Spinner from 'vue-simple-spinner'
+  import CollectionDocumentation from './CollectionDocumentation'
 
-export default {
-  name: 'CollectionEditor',
-  components: {
-    codemirror,
-    Spinner,
-  },
-  props: {
-    value: String,
-    loading: Boolean,
-  },
-  data() {
-    return {
-      code: this.value,
-      editorOptions: {
-        tabSize: 4,
-        styleActiveLine: true,
-        smartIndent: true,
-        indentUnit: 4,
-        lineNumbers: true,
-        line: true,
-        mode: 'text/x-php',
-        lineWrapping: true,
+  export default {
+    name: 'CollectionEditor',
+    components: {
+      CollectionDocumentation,
+      codemirror,
+      Spinner,
+    },
+    props: {
+      value: String,
+      loading: Boolean,
+    },
+    data () {
+      return {
+        code: this.value,
+        editorOptions: {
+          tabSize: 4,
+          styleActiveLine: true,
+          smartIndent: true,
+          indentUnit: 4,
+          lineNumbers: true,
+          line: true,
+          mode: 'text/x-php',
+          lineWrapping: true,
+        },
+      }
+    },
+    watch: {
+      value () {
+        this.code = this.value
       },
-    };
-  },
-  watch: {
-    value() {
-      this.code = this.value;
+      code () {
+        this.$emit('input', this.code)
+      },
     },
-    code() {
-      this.$emit('input', this.code);
-    },
-  },
-};
+  }
 </script>
 
 <style scoped>
