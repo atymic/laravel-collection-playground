@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 flex flex-col">
+  <div class="flex-1 flex h-full flex-col w-1/3">
     <div class="flex flex-wrap border-b text-sm select-none">
       <span
         class="py-2 px-3 text-gray-500">
@@ -11,7 +11,7 @@
         Tidy
       </button>
     </div>
-    <div class="flex-1 flex flex-col justify-center align-center">
+    <div class="h-full">
       <div v-if="loading" class="flex justify-center align-center">
         <spinner size="large"></spinner>
       </div>
@@ -51,7 +51,7 @@ export default {
         lineNumbers: true,
         line: true,
         mode: 'application/json',
-        lineWrapping: true,
+        lineWrapping: false,
       },
     };
   },
@@ -73,14 +73,17 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
   .vue-codemirror {
     width: 100% !important;
     height: 100% !important;
   }
+</style>
 
+
+<style>
   .CodeMirror {
-    width: 100% !important;
     height: 100% !important;
+    width: 100% !important;
   }
 </style>

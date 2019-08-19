@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 flex flex-col">
+  <div class="flex-1 flex flex-col w-1/3">
     <div class="flex flex-wrap border-b text-sm select-none">
       <span
         class="py-2 px-3 text-gray-500">
@@ -11,7 +11,7 @@
         Download
       </button>
     </div>
-    <div class="flex-1 flex border-r ">
+    <div class="h-full">
       <php-loading v-if="!phpLoaded && !value"></php-loading>
       <php-error v-else-if="outputError" :error="outputError"></php-error>
       <codemirror v-else v-model="outputJson" :options="editorOptions"></codemirror>
@@ -95,7 +95,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
   .vue-codemirror {
     width: 100% !important;
     height: 100% !important;

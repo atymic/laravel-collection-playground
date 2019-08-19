@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-1 flex flex-col align-center">
+  <div class="flex-1 flex flex-col align-center h-full">
     <div class="bg-red-700 text-white font-bold px-4 py-2">
       Execution Failed - {{ error.type }}
     </div>

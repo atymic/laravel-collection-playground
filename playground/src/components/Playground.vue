@@ -1,13 +1,13 @@
 <template>
   <main>
-    <div class="w-screen h-screen flex flex-col">
+    <div class="w-screen h-screen overflow-x-hidden flex flex-col">
       <navbar
         :saveable="!isSavedPlayground && !error"
         :forkable="isSavedPlayground"
         @save="save"
       ></navbar>
-      <div class="flex-1 flex">
-        <div class="flex flex-1 flex-row border-r">
+      <div class="flex-1 h-full flex">
+        <div class="flex h-full flex-1 flex-row w-full border-r">
           <json-input-editor
             title="Input JSON"
             :editable="true"

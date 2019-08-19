@@ -1,12 +1,12 @@
 <template>
-  <div class="flex-1 flex flex-col">
+  <div class="flex-1 flex flex-col w-1/3 h-full">
     <div class="flex flex-wrap border-b border-l border-r text-sm select-none">
       <span
         class="py-2 px-3 text-gray-500">
         Collection Code
       </span>
     </div>
-    <div class="flex-1 flex border-l border-r ">
+    <div class="h-full border-l border-r">
       <div v-if="loading" class="flex-1 flex flex-col justify-center align-center">
         <spinner size="large"></spinner>
       </div>
@@ -57,5 +57,16 @@ export default {
 </script>
 
 <style scoped>
+  .vue-codemirror {
+    width: 100% !important;
+    height: 100% !important;
+  }
+</style>
 
+
+<style>
+  .CodeMirror {
+    height: 100% !important;
+    width: 100% !important;
+  }
 </style>
