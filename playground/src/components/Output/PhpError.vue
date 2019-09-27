@@ -4,7 +4,7 @@
       Execution Failed - {{ error.type }}
     </div>
     <div class=" border-red-400 bg-red-100 px-4 py-3 text-red-700 h-full">
-      <p>{{ error.message }}</p>
+      <p class="whitespace-pre-wrap">{{ error.message }}</p>
     </div>
   </div>
 </template>

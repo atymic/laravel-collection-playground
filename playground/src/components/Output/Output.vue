@@ -67,6 +67,22 @@ export default {
     }
   },
   created() {
+    if (!window.isSupportedBrowser) {
+      this.phpLoaded = true;
+      this.outputError = {
+        type: 'Browser Not Supported',
+        message: `To use the playground, a recent desktop browser version supporting web assembly is required.
+
+Chrome: >= v60
+Firefox: >= v60
+Safari: >= v13
+
+Please try on one of the supported browsers. If you are still having issue, create a github issue.
+`
+      }
+      return;
+    }
+
     this.$root.$on('php.loaded', () => {
       this.phpLoaded = true;
     });
