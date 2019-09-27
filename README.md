@@ -12,11 +12,16 @@ The disadvantages of this approach are the limited browser support - for it to w
 version of Chrome or Firefox that is recent. Safari & Edge aren't support at the moment.
 See [this issue](https://github.com/atymic/laravel-collection-playground/issues/2) for more information.
 
+### It works without internet? :mobile_phone_off:
+The playground is built as a PWA, which provides several advantages. 
+
+- Caching of downloaded PHP binary (no need to re-download the binary on each page load)
+- Support for using offline (since the code is eval'd locally, it will work without any internet)
+
 ## Project Details
 
 ### Folder Structure
  - `api` contains the lambda function that is used to save playground as github gists, so they can be saved & shared. 
- The `functions` folder is just the compiled version.
  - `php-app` contain a small PHP application that is used to evaluate the collection code, catch errors and return it 
  back to the client as json.
  - `php-src` contains the scripts to build the in web assembly build, containing PHP + the `php-app` code.
