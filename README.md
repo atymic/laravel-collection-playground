@@ -1,9 +1,5 @@
 # Laravel Collection Playground
 
-<p align="center">
-    <img src="logo.png" />
-</p>
-
 [Laravel's collections](https://laravel.com/docs/5.8/collections) are awesome!  
 This project provides a "jsfiddle" style environment to test, run & share collection code.
 
